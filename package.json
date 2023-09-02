@@ -1,0 +1,20 @@
+{
+  "name": "react-proyectos",
+  "version": "1.0.0",
+  "description": "Proyectos React - clase midudev",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Neira21/react-proyectos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Neira21/react-proyectos/issues"
+  },
+  "homepage": "https://github.com/Neira21/react-proyectos#readme"
+}
