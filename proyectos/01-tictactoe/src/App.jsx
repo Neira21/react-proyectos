@@ -1,24 +1,10 @@
 import { useState } from 'react'
 import './App.css'
 import confetti from 'canvas-confetti'
-
-const TURNS  = {
-  X: "X",
-  O: "O",
-}
-
-//Componente Cuadro
-const Square = ({children, isSelected, updateBoard, index}) => {
-  const className = `square ${isSelected ? 'is-selected' : ''}`
-  const handleClick = () => {
-    updateBoard(index)
-  }
-  return (
-    <div onClick={handleClick} className={className}>
-      {children}
-    </div>
-  )
-}
+import Square from './components/Square'
+import Winner from './components/Winner'
+import { TURNS } from './components/Constantes.js'
+import {checkWinner} from './logic/checkWinner.js'
 
 function App() {
   const [board, setBoard] = useState(Array(9).fill(null))
@@ -46,24 +32,9 @@ function App() {
     }else if(!newBoard.includes(null)){
       setWinner(false)
     }
-
   }
 
-  const checkWinner = (boardToCheck) => {
-    const winningCombinations = [
-      [0,1,2], [3,4,5], [6,7,8], // horizontal
-      [0,3,6], [1,4,7], [2,5,8], // vertical
-      [0,4,8], [2,4,6], // diagonal
-    ]
-    for(const combo of winningCombinations){
-      const [a,b,c] = combo
-      if(boardToCheck[a] && boardToCheck[a] === boardToCheck[b] && boardToCheck[a] === boardToCheck[c]){
-        return boardToCheck[a]
-      }
-    }
-    //si no hay ganador
-    return null
-  }
+
 
   const gameRestart = () => {
     setBoard(Array(9).fill(null))
@@ -84,7 +55,6 @@ function App() {
           {board.map((cell, index) => (
             <Square
               key={index}
-              className='cell'
               updateBoard={()=>updateBoard(index)}
             >
               {cell}
@@ -100,32 +70,8 @@ function App() {
             {TURNS.O}
           </Square>
         </div>
-
-        {
-          winner !== null && (
-            <div className='winner'>
-              <div className='text'>
-                <h2>
-                  {
-                    winner === false
-                    ? 'Empate'
-                    : `Ganador: ${winner}`
-                  }
-                </h2>
-                <div className='win'>
-                  {winner && <Square>{winner}</Square>}
-                </div>
-
-                <footer>
-                  <button onClick={()=>gameRestart()}>Reiniciar</button>
-                </footer>
-
-              </div>
-            </div>
-          )
-        }
         
-
+        <Winner winner={winner} gameRestart={gameRestart} ></Winner>
 
       </div>
 
