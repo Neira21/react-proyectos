@@ -1,6 +1,11 @@
 import Square from "./Square"
+import PropTypes from 'prop-types';
 
 const Board = ({updateBoard, board}) => {
+    Board.propTypes = {
+      updateBoard: PropTypes.func,
+      board: PropTypes.array
+    }
     return(
         <div className='game'>
           {board.map((cell, index) => (

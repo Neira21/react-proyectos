@@ -1,6 +1,13 @@
 import Square from "./Square"
+import PropTypes from 'prop-types';
+
 
 const Winner = ({winner, gameRestart} ) => {
+  
+    Winner.propTypes = {
+      winner: PropTypes.bool,
+      gameRestart: PropTypes.func
+    }
     if (winner === null) return null
 
     const winnerText = winner === false ? 'Empate' : `Ganador: ${winner}`
