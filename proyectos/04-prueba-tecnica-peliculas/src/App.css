@@ -1,0 +1,23 @@
+header h2{
+  text-align: center;
+}
+header form{
+  
+}
+form{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+main .PeliculaContent{
+  display: grid;
+  /* responsive */
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 20px;
+}
+
+
+li{
+  list-style: none;
+}
