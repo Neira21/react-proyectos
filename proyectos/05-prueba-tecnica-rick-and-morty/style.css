@@ -1,0 +1,98 @@
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: rgb(44, 65, 88);
+}
+
+.title{
+  padding: 20px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+
+.primary{
+  background-color: rgb(6, 46, 70);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.primary:hover{
+  background-color: rgb(29, 161, 242);
+  opacity: 0.8;
+}
+
+.form{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+  
+}
+.form select{
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  width: 75%;
+}
+
+.navegation{
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+.charactersContainer{
+
+  margin: 10px 15px;
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+  grid-gap: 50px;
+}
+
+.charactersContainer .character{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.character .characterName{
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0;
+  text-align: center;
+}
+
+.image{
+  max-width: 250px;
+  max-height: 200px;
+}
+
+.character .characterStatus{
+  color: white;
+  font-size: 16px;
+  text-align: center;
+}
+
+
+.form input{
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  width: 75%;
+}
+
+
