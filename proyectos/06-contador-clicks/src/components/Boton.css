@@ -1,0 +1,28 @@
+.boton{
+  width: 150px;
+  height: 80px;
+  margin: 5px;
+  font-size: 30px;
+  cursor: pointer;
+  border: 2px solid #000;
+  border-radius: 10px;
+}
+
+.boton-reinicio{
+  color: white;;
+  background-color: #ff0000;
+  
+}
+
+.boton-contador{
+  color: white;;
+  background-color: #5437c7;
+}
+
+.boton-contador:hover{
+  background-color: #391c89;
+}
+
+.boton-reinicio:hover{
+  background-color: #710606;
+}
