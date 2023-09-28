@@ -1,0 +1,102 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main{
+  width: 750px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 0 auto; 
+}
+
+h1{
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.todoContainer{
+  display: flex;
+  padding: 10px auto;
+}
+
+/* Formulario inicial */
+.formularioTodo{
+  display: flex;
+}
+
+.formularioTodo-button{
+  border: none;
+  background-color: #61dafb;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  color: black;
+}
+
+.formularioTodo-input{
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  width: 300px;
+}
+
+.containerElement{
+  display: flex;
+  width: 100%;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo{
+  flex: 1;
+  margin: 10px auto;
+  cursor: pointer;
+  padding: 10px;
+  background-color: aquamarine;
+  color: black;
+  border-radius: 5px;
+  max-width: 334px;
+}
+
+.todo p{
+  overflow-wrap: anywhere;
+  flex: 1;
+}
+
+.completada{
+  /* tachar texto */
+  text-decoration: line-through;
+  background-color: #61dafb;
+}
+
+.botones{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.boton{
+  border: none;
+  padding: 0;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  margin: 3px;
+  width: 56px;
+  height: 45px;
+}
+
+.boton-borrar{
+  background-color: #f44336;
+}
+
+.boton-editar{
+  background-color: #671aae;
+}
