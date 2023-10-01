@@ -1,0 +1,9 @@
+.weatherContainer {
+  width: 500px;
+  height: 500px;
+  margin: 15px auto;
+}
+
+html, body{
+  background-color: aquamarine
+}
