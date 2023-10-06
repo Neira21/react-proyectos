@@ -1,0 +1,14 @@
+.Navbar{
+  display: flex;
+  justify-content: center;
+  border: 1px solid white;
+  margin-bottom: 10px;
+}
+
+.Navbar .Link {
+  margin: 10px 30px;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}

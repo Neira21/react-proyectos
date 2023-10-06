@@ -1,0 +1,19 @@
+.Libro-contenedor{
+  background-color: red;
+  border: 1px solid white;
+  margin: 20px;
+  min-height: 200px;
+}
+
+.Libro-title{
+  
+  font-weight: bold;
+  
+}
+
+.Libro-imagen{
+  
+  height: 50px;
+  
+
+}
