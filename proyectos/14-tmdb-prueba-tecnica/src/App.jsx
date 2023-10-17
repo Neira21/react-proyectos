@@ -6,8 +6,8 @@ import {GetMovie} from './services/SearchMovie'
 
 const getMovies = async (page, setMovies, setLoading) => {
   setLoading(true)
-  const data  = await GetMovie(page)
-  setMovies(data.results)
+  const {results, total_pages}  = await GetMovie(page)
+  setMovies(results)
   setLoading(false)
 }
 

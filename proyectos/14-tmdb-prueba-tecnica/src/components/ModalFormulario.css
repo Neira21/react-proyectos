@@ -8,9 +8,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100vh;
 }
 
 .modal_contenedor{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
   background-color: #fff;
 }
@@ -22,10 +28,31 @@
   border-radius: 10px;
 }
 
-.modal-header{
+.modal_header{
+  width: 60%;
+}
+.modal_header .modal-title{
+  min-width: 10px;
+}
+
+.modal_btn{
+  background-color: red;
+  color: #fff;
+  margin-top: 25px;
+  font-size: 20px;
+  padding: 10px;
+}
+
+
+.modal_body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  margin-top: 25px;
+}
+
+.form{
+  display: flex;
+  justify-content: space-around;
 }
 
