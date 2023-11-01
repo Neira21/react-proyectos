@@ -1,0 +1,36 @@
+.product-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-card{
+  /* quitar estilos */
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  min-height: 450px;
+}
+.product-title{
+  margin: 0;
+  font-size: 25px;
+  font-weight: 700;
+  max-width: 350px;
+  text-align: center;
+}
+.product-price{
+  margin: 0;
+  font-weight: 500;
+}
+
+.product-img{
+  width: 350px;
+  height: 300px;
+  object-fit: cover;
+}
