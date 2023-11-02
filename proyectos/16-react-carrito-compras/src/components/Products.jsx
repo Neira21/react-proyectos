@@ -9,6 +9,7 @@ const Products = ({ products }) => {
             <h3 className='product-title'>{product.title}</h3>
             <p className='product-price'>${product.price}</p>
             <img className='product-img' src={product.thumbnail} alt={product.title} />
+            <button>Agregar al carrito</button>
           </li>
         )
       })}

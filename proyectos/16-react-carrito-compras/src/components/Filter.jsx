@@ -1,24 +1,19 @@
 import './Filter.css'
-import { useState } from 'react'
+import { useContext } from 'react'
+import ContextFilter from '../context/ContextFilter'
 
-const Filter = ({ changeFilter }) => {
-  const [filter, setFilter] = useState({
-    search: '',
-    category: 'all',
-    price: 0
-  })
+const Filter = () => {
+  const { filter, setFilter } = useContext(ContextFilter)
 
   const handleChangePrice = (e) => {
     setFilter({
       ...filter,
       price: e.target.value
     })
-    changeFilter(filter)
   }
 
   const ButtonFiltrar = () => {
     console.log(filter)
-    changeFilter(filter)
   }
 
   return (
@@ -28,7 +23,7 @@ const Filter = ({ changeFilter }) => {
           <label htmlFor='price'>
             Precio mínimo
           </label>
-          <input id='price' type='range' min='0' max='1000' onChange={handleChangePrice} />
+          <input id='price' type='range' min='0' max='1000' onChange={handleChangePrice} value={filter.price} />
           {filter.price}
         </div>
 
