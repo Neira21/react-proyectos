@@ -1,0 +1,23 @@
+/* CartPanel.css */
+.cart-panel {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 400px;
+  height: 100%;
+  background-color: white;
+  transition: right 0.3s;
+  color: black;
+  /* Barra vertical desplazamiento */
+  overflow-y: scroll;
+  padding: 0;
+  margin: 0;
+}
+
+.cart-panel ul li img{
+  width: 310px;
+}
+
+.cart-panel.open {
+  right: 0;
+}

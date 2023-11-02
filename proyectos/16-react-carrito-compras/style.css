@@ -67,3 +67,15 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+
+.button-cart{
+  background-color: #646cff;
+  border: none;
+  padding: 30px 35px;
+  border-radius: 50%;
+  font-size: 30px;
+  cursor: pointer;
+  bottom: 15px;
+  right: 20px;
+  position: fixed;
+}
