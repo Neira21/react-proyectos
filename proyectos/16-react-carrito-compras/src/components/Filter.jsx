@@ -4,16 +4,11 @@ import ContextFilter from '../context/ContextFilter'
 
 const Filter = () => {
   const { filter, setFilter } = useContext(ContextFilter)
-
   const handleChangePrice = (e) => {
     setFilter({
       ...filter,
       price: e.target.value
     })
-  }
-
-  const ButtonFiltrar = () => {
-    console.log(filter)
   }
 
   return (
@@ -53,10 +48,6 @@ const Filter = () => {
             <option value='groceries'>Groceries</option>
           </select>
         </div>
-      </div>
-
-      <div>
-        <button className='filter-button' onClick={ButtonFiltrar}>Filtrar</button>
       </div>
     </div>
 

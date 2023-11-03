@@ -1,17 +1,20 @@
-import { useState } from 'react'
 import Products from './components/Products'
 import Filter from './components/Filter'
 import { useFilters } from './hooks/useFilters'
 import { products } from '../mocks/info.json'
 import Footer from './components/Footer'
 import CartPanel from './components/CartPanel'
-import { BsFillCartFill } from 'react-icons/bs'
 import { ContextCartProvider } from './context/ContextCart'
+import { useState } from 'react'
+import ButtonCartPanel from './components/ButtonCartPanel'
+
 const App = () => {
   const { filterProducts } = useFilters()
   const [productos] = useState(products)
-
   const filteredProducts = filterProducts(productos)
+
+  // Ordernar por precio de menor a mayor
+  const sortedProducts = filteredProducts.sort((a, b) => a.price - b.price)
 
   const [isCartOpen, setCartOpen] = useState(false)
 
@@ -19,11 +22,9 @@ const App = () => {
     <ContextCartProvider>
       <div className='app'>
         <Filter />
-        <Products products={filteredProducts} />
+        <Products products={sortedProducts} />
         <Footer />
-        <button className='button-cart' onClick={() => setCartOpen(true)}>
-          <BsFillCartFill /> <span>1</span>
-        </button>
+        <ButtonCartPanel setCartOpen={setCartOpen} />
         <CartPanel isOpen={isCartOpen} onClose={() => setCartOpen(false)} />
       </div>
     </ContextCartProvider>
