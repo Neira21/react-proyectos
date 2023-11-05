@@ -3,10 +3,11 @@ import { useState } from 'react'
 import '../App.css'
 import Pelicula from '../components/Pelicula'
 import {GetMovie} from '../services/SearchMovie'
+import { Link } from 'react-router-dom'
 
 const getMovies = async (page1, setMovies, setLoading) => {
   setLoading(true)
-  const {results, page, total_pages, total_results}  = await GetMovie(page1)
+  const {results}  = await GetMovie(page1)
 
   setMovies(results)
   setLoading(false)
@@ -24,7 +25,13 @@ function Inicio() {
   if(loading) return <h1>Cargando...</h1>
 
   return (
-    <>
+    <div style={{display:'flex', flexDirection:'column'}}>
+      
+        <Link to='/lista' style={{textAlign:'center', textDecoration:'none'}}>
+          <h1 style={{color:'white', cursor: 'pointer'}}>Lista de películas valoradas</h1>
+        </Link>
+      
+        
       <div className='buttons'>
         {page1 == 1 
 
@@ -40,7 +47,7 @@ function Inicio() {
           <Pelicula key={movie.id} movie={movie} />
           )) }
       </div>
-    </>
+    </div>
   )
 }
 

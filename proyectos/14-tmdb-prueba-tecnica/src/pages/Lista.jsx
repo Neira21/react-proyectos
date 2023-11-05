@@ -1,5 +1,6 @@
 import { useEffect } from "react"
 import { useState } from "react"
+import { Link } from 'react-router-dom'
 
 const style = {
   container: {
@@ -7,9 +8,8 @@ const style = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    flexWrap: 'wrap',
     fontSize: '50px',
-    flexColumn: 'column',
+    flexDirection: 'column',
   }
 }
 
@@ -34,6 +34,9 @@ const Lista = () => {
 
   return (
     <div style={style.container}>
+      <Link to='/' style={{textAlign:'center', textDecoration:'none'}}>
+        <h1 style={{color:'white', cursor: 'pointer'}}>Regresar</h1>
+      </Link>
       <ul>
         {movies.map((movie,index) => (
           <li key={index}>{movie.title} <span> {movie.rating}</span></li>
