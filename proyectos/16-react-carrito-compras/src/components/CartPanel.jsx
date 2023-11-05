@@ -44,7 +44,7 @@ function CartPanel ({ isOpen, onClose }) {
           )
         })}
       </ul>
-      <h2>Total: {total}</h2>
+      <h2>Total: {total} $</h2>
     </div>
   )
 }

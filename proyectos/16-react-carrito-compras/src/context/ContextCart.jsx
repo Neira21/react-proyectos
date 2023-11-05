@@ -1,52 +1,12 @@
 import { createContext, useReducer } from 'react'
+import { cartInitialState, cartReducer } from '../reducer/CartReducer.js'
 
 export const ContextCart = createContext()
 
 // Para usar el reducer, creamos el estado inicial y lo pasamos como segundo parámetro al useState
-const initialState = []
-
-const reducer = (state, action) => {
-  const { type, payload } = action
-
-  switch (type) {
-    case 'ADD_TO_CART':{
-      const productInCardIndex = state.findIndex((item) => item.id === payload.id)
-
-      if (productInCardIndex === -1) {
-        // Producto no está en el carrito
-        return [
-          ...state,
-          { ...payload, quantity: 1 }
-        ]
-      }
-      // Producto ya está en el carrito
-      const newState = structuredClone(state)
-      newState[productInCardIndex].quantity += 1
-      return newState
-    }
-    case 'REMOVE_CART_ONE': {
-      const productInCardIndex = state.findIndex((item) => item.id === payload.id)
-
-      if (state[productInCardIndex].quantity === 1) {
-        // acceder al caso REMOVE_OF_CART
-        return state.filter((item) => item.id !== payload.id)
-      }
-      const newState = structuredClone(state)
-      newState[productInCardIndex].quantity -= 1
-      return newState
-    }
-    case 'REMOVE_OF_CART': {
-      return state.filter((item) => item.id !== payload.id)
-    }
-    case 'CLEAN_CART': {
-      return initialState
-    }
-  }
-  return state
-}
 
 export const ContextCartProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(reducer, initialState)
+  const [state, dispatch] = useReducer(cartReducer, cartInitialState)
 
   const AddToCart = (payload) => {
     dispatch({ type: 'ADD_TO_CART', payload })
@@ -65,6 +25,9 @@ export const ContextCartProvider = ({ children }) => {
   }
 
   // Un reducer recibe el estado actual y una acción y a partir de eso devuelve un nuevo estado
+  // También para que el reducer funcione correctamente, el estado debe ser inmutable, por lo que no podemos hacer state.push()
+  // Para eso, podemos usar el operador spread (...) o la función Object.assign()
+  // Y por último, es más fácil relizar los test en el reducer
 
   return (
     <ContextCart.Provider value={{ cart: state, AddToCart, RemoveCartOne, RemoveOfCart, CleanCart }}>
