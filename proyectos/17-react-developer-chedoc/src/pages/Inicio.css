@@ -1,0 +1,183 @@
+/* Encabezado */
+
+.encabezado{
+  background-color: #0084FF;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 100px;
+}
+
+.titulo{
+  color: white;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+
+.titulo h1{
+  display: flex;
+  gap: 20px;
+}
+
+.login{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+
+}
+
+.login a{
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.login button{
+  background-color: #3E3E3F;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  height: 50%;
+}
+
+/* Cuerpo de página */
+.contenido{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.contenido-title{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 50px;
+  background-color: #3E3E3F;
+  color: white;
+  padding: 50px 0;
+}
+
+.contenido-title h1{
+  margin-left: 100px;
+}
+
+.bloque-contenedor{
+  padding: 75px 0;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 20px;
+  margin: 0 50px;
+
+}
+
+.bloque{
+  background-color: black;
+  width: 100%;
+  position: relative;
+}
+
+.bloque p{
+  color: white;
+  font-size: 30px;
+  
+  position: absolute;
+  top: 55%;
+  left: 30%;
+  
+}
+
+.bloque img{
+  object-fit: cover; /* o contain */
+  width: 250px;
+  height: 300px;
+
+}
+
+
+/* serie o pelicula contenido */
+
+.contenedor-principal{
+  margin: 60px 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+.contenedor-serie{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
+.contenedor-serie p{
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+
+.contenedor-serie:hover{
+  opacity: 0.5;
+  border: 1px solid red;
+}
+
+
+
+/* Pie de página */
+
+.piePagina{
+  background-color: #1E1F1E;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.copy{
+  display: flex;
+  align-items: center;
+  height: 50px;
+  margin-left: 100px;
+}
+
+.lista{
+  font-size: 18px;
+  display: flex;
+  width: 55%;
+  margin: 30px;
+  text-align: center;
+  margin-left: 70px;
+  
+  
+}
+
+.lista-element{
+  list-style: none; 
+  margin-left: 15px;
+  width: 100%;
+}
+
+.redes_descarga{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.redesSociales img{
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+}
+
+.descarga img{
+  width: 150px;
+  height: 100px;
+  margin: 10px;
+
+}
