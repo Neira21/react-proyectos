@@ -5,20 +5,18 @@ import Contenido from "../components/Contenido"
 import sample from '../assets/data/sample.json'
 import SerieElemento from "../components/SerieElemento"
 import FiltroAño from "../components/FiltroAño"
-
-import { useState, useEffect } from "react"
+import { FiltroContext } from "../context/FiltroContext"
+import { useState, useEffect, useContext } from "react"
 
 const Peliculas = () => {
+
+  const {año} = useContext(FiltroContext)
   const [movies, setMovies] = useState([])
-  const [año, setAño] = useState('all')
+  
 
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
 
-  const OnChange = (value) => {
-    const newYear = value
-    setAño(newYear)
-  }
 
   const getMovies = () => {
     try {
@@ -27,9 +25,7 @@ const Peliculas = () => {
         const seriesNews = sample.entries.filter((item) => item.programType === 'movie' && item.releaseYear >= 2010).slice(0,20)
         .sort((a, b) => a.title.localeCompare(b.title))
         setMovies(seriesNews)
-        console.log("all")
       }else{
-        console.log(año)
         const seriesNews = sample.entries.filter((item) => item.programType === 'movie' && item.releaseYear == año).splice(0,20)
         .sort((a, b) => a.title.localeCompare(b.title))
         setMovies(seriesNews)
@@ -50,7 +46,7 @@ const Peliculas = () => {
     <div>
       <Encabezado />
         <Contenido title='Popular Movies ' >
-        <FiltroAño OnChange={OnChange} />
+        <FiltroAño />
           {loading 
             ? <p>Loading</p>
             : <div className='contenedor-principal'>

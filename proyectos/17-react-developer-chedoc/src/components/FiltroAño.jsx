@@ -1,9 +1,14 @@
+import { useContext } from "react"
+import { FiltroContext } from "../context/FiltroContext"
+
 // eslint-disable-next-line
-const FiltroAño = ({OnChange}) => {
+const FiltroAño = () => {
+
+  const { setAño } = useContext(FiltroContext)
 
   const ChangeYear = (e) => {
     const newYear = e.target.value
-    OnChange(newYear)
+    setAño(newYear)
   }
 
   return (
