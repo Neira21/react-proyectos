@@ -1,0 +1,8 @@
+form{
+  margin: 20px;
+}
+
+input, select{
+  width: 100%;
+  border-radius: 25px;
+}
