@@ -1,0 +1,26 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul{
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  gap: 50px;
+}
+
+
+.is-active{
+  color: red;
+  pointer-events: none;
+  /* negrita */
+  font-weight: bold;
+}
