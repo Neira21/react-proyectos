@@ -1,0 +1,186 @@
+html{
+  background-color: #a250dd;
+  background-image: radial-gradient(circle at 50% -20.71%, #f96dc7 0, #e964cd 16.67%, #d65cd3 33.33%, #be55d8 50%, #a250dd 66.67%, #7f4fe3 83.33%, #4f50e8 100%);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.app h1{
+  margin-bottom: 60px;
+  margin-top: 20px;
+}
+
+/* Navbar */
+.navbar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #a250dd;
+  width: 100%;
+  opacity: 0.8;
+}
+
+.navbar-ul{
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+}
+
+.navbar-ul li{
+  padding: 20px;
+  font-size: 20px;
+  color: black;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+/* PÁGINA INICIO */
+.inicio{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  height: 100vh;
+}
+
+.flex-row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.flex-row div{
+  flex: 1;
+  min-height: 200px;
+  min-width: 250px;
+  background-color: red;
+}
+
+@media (max-width: 578px) {
+  .flex-row{
+    flex-direction: column;
+  }
+}
+/* FIN PÁGINA INICIO */
+
+
+/* PÁGINA POKEMON LISTA */
+
+/* Pokemon container */
+
+.contenedor-pokemon{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  transition: 0.5s all ease;
+}
+
+/* Pokemon card */
+.pokemon-caja img{
+  height: 170px;
+  width: 200px;
+}
+.pokemon-caja{
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  transition: 0.5s all ease;
+  border: 2px solid black;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.pokemon-caja p {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+/* modal */
+.modal{
+  background-color: black;
+  opacity: 0.8;
+}
+
+/* FIN PÁGINA POKEMON LISTA */
+
+
+/* PÁGINA EVOLUCIONES */
+.evoluciones-contenedor{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.botones{
+  display: flex;
+  width: 1000px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.botones .boton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  font-size: 70px;
+  background-color: #cedc02;
+  cursor: pointer;
+  border-radius: 20%;
+}
+
+.boton:hover{
+  background-color: #b29a01bf;
+}
+
+.boton:active{
+  transform: translateY(5px);
+}
+
+.cadena-evolutiva{
+  display: flex;
+  gap: 10px;
+}
+
+.pokemon-card{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  border: 1px solid yellow;
+  border-radius: 10%;
+}
+
+.pokemon-card h3{
+  text-transform: capitalize;
+}
+
+  
+/* FIN PÁGINA EVOLUCIONES */
