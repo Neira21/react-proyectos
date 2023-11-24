@@ -22,5 +22,9 @@
   },
   "eslintConfig": {
     "extends": "./node_modules/standard/eslintrc.json"
+  },
+  "dependencies": {
+    "create": "^0.0.2",
+    "vite": "^5.0.0"
   }
 }
