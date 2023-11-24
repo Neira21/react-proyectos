@@ -184,3 +184,15 @@ a{
 
   
 /* FIN PÁGINA EVOLUCIONES */
+
+/* INICIO PÁGINA POKEDEX */
+
+.pokedex-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* FIN PÁGINA POKEDEX */

@@ -1,0 +1,41 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+html{
+  background-color: aliceblue;
+}
+
+.app-todo-container{
+  width: 500px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario-todo{
+  display: flex;
+  gap: 5px;
+}
+
+.formulario-input-tarea{
+  flex-grow: 1;
+  width: 100%;
+  padding: 10px;
+  border-radius: 3px;
+  border: solid 1px #999;
+}
+
+.formulario-submit-tarea{
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  cursor: pointer
+}
+
+.lista-tareas{
+
+}

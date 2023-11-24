@@ -1,0 +1,34 @@
+.app{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.contenedor-opciones{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.contenedor-opciones .opcion{
+  /* color degradado purpura */
+  background: linear-gradient(90deg, rgb(119, 115, 199) 0%, rgb(125, 125, 169) 35%, rgb(91, 193, 214) 100%);
+  height: 250px;
+  width: 250px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+a{
+  text-decoration: none;
+}
