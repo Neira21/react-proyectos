@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "text": "Estudiar React",
+      "id": 3,
+      "done": true
+    },
+    {
+      "text": "Estudiar javascript",
+      "id": "cd95e9c2-a4a7-4c04-a4f0-fc9221b54375",
+      "done": false
+    },
+    {
+      "text": "Tarea de matemáticas",
+      "id": "0de9196a-f0b8-4aee-8acf-9502e713cb0d",
+      "done": false
+    },
+    {
+      "text": "Comprar comida",
+      "id": "a81ab1c1-6619-4a2f-b9e1-3a6fe7c8e98c",
+      "done": true
+    }
+  ]
+}

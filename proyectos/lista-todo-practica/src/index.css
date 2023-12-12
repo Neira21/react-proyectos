@@ -81,6 +81,7 @@ button {
   gap: 1rem;
   border: 1px solid #535bf2;
   margin: 10px;
+  margin-bottom: 20px;
 }
 
 .tarea{

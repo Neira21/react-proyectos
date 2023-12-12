@@ -2,7 +2,7 @@ const Header = () => {
   return (
     <div className="header">
       <p>
-        Groceries List
+        Lista de ToDos
       </p> 
     </div>
   )

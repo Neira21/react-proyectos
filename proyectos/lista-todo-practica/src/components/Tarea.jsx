@@ -3,12 +3,12 @@ import { MdDelete } from "react-icons/md";
 //import { MdModeEdit } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
 
-const Tarea = ({task, handleCheck, deleteTask, openEditModal}) => {
+const Tarea = ({task, editTask, deleteTask, openEditModal}) => {
   return (
     <div className='tarea' >
       <input className='tarea-checkbox' type="checkbox" 
       checked={task.done}
-      onChange={()=>handleCheck(task.id)}
+      onChange={()=>editTask('', task.id)}
       />
       <p className={`tarea-texto ${task.done ? 'completada' : ''}`}>{task.text}</p>
       <FaEdit

@@ -12,7 +12,7 @@ const FormTask = ({addTask}) => {
   const inputRef = useRef(null);
 
   return (
-    <form className="form">
+    <form className="form" onSubmit={(e) => {e.preventDefault()}}>
       <input 
         type="text" 
         autoFocus
