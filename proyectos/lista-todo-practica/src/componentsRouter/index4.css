@@ -1,0 +1,142 @@
+.app4{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+}
+
+.app4-footer{
+  background-color: #58C4FA;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+}
+
+.app4-post-container{
+  padding: 0 18px;
+  margin: 20px 0;
+}
+.app4-post-container button{
+  margin: 20px 0;
+}
+
+.app4-header-title{
+  background-color: #58C4FA;
+  font-size: 35px;
+  padding: 20px;
+  font-size: 550
+}
+
+.app4-navbar{
+  padding: 10px;
+  background-color: black;
+  color: white;
+}
+
+.app4-posts-container{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow-y: scroll;
+  color: black;
+  height: 500px;
+  padding: 20px 15px;
+}
+
+.app4-posts{
+  margin-bottom: 15px;
+  border-bottom: 1px solid black
+}
+
+.app4-input{
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #58C4FA;
+  padding: 7px;
+}
+
+.app4-lista{
+  display: flex;
+  gap: 50px;
+  list-style: none;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+.app4-lista li:hover{
+  color: aquamarine;
+  cursor: pointer;
+}
+
+.app4-post{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  height: 100vh;
+}
+
+.app4-post-form{
+  display: flex;
+  flex-direction: column;
+}
+
+.app4-post-title{
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  color: black;
+}
+
+.app4-post-title input{
+  width: 100%;
+  border-radius: 8px;
+  font-size: 25px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+
+.app4-post-content{
+  color: black;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.app4-post-content textarea{
+  width: 100%;
+  height: 320px;
+  border-radius: 8px;
+  font-size: 18px;
+  resize: none;
+  padding: 10px 5px;
+  border: 1px solid #58C4FA;
+}
+
+.app4-post-button{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+@media (min-width: 600px){
+  
+  .app4-navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 10px 30px;
+    justify-content: space-between;
+  }
+  
+  
+}
+

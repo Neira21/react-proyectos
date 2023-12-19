@@ -1,0 +1,24 @@
+.clase div:nth-last-child(even) {
+  background-color: rgba(240, 121, 121, 0.443);
+}
+
+.fila tr:nth-child(odd){
+  background-color: rgba(240, 121, 121, 0.443);
+}
+
+.fila tr:nth-child(even){
+  background-color: rgba(72, 250, 48, 0.836);
+}
+
+.app3-menu{
+  width: 100%;
+  display: flex;
+}
+
+.app3-option{
+  flex: 1;
+}
+
+.select{
+  background-color: rgba(72, 250, 48, 0.836);
+}
