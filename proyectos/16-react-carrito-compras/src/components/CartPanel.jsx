@@ -28,7 +28,7 @@ function CartPanel ({ isOpen, onClose }) {
           return (
             <li key={product.id} className='cart-element'>
               <h3>{product.title}</h3>
-              <img src={product.thumbnail} alt={product.title} />
+              <img src={product.image} alt={product.title} />
               <div style={{ display: 'flex', justifyContent: 'space-around' }}>
                 <p>Precio {product.price}</p>
                 <p>Cantidad {product.quantity}</p>

@@ -1,7 +1,7 @@
 import Products from './components/Products'
 import Filter from './components/Filter'
 import { useFilters } from './hooks/useFilters'
-import { products } from '../mocks/info.json'
+import { products } from '../mocks/info2.json'
 import Footer from './components/Footer'
 import CartPanel from './components/CartPanel'
 import { ContextCartProvider } from './context/ContextCart'
