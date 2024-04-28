@@ -9,7 +9,7 @@ import Loading from './components/Loading'
 function App() {
   
   const APP_URL='http://api.weatherapi.com/v1/current.json?aqi=no'
-  const APP_KEY='d0419b5a08534944af4222620232909'
+  const APP_KEY=import.meta.env.VITE_APP_KEY
   
   const [weather, setWeather] = useState(null)
 
