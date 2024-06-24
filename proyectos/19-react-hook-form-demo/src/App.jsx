@@ -1,4 +1,5 @@
 import { useForm } from 'react-hook-form'
+import { useEffect } from 'react'
 
 function App() {
   const {
@@ -10,19 +11,46 @@ function App() {
     reset
   } = useForm()
 
-  console.log(errors)
 
   const onSubmit = handleSubmit((data) => {
     console.log('data', data)
     // enviar a una base de datos
-    alert('Enviando Formulario')
     reset()
   })
+
+
+
+  useEffect(() => {
+    // Ver los valores de los inputs
+    console.log("---------------------------")
+    console.log("nombre", watch('nombre'))
+    console.log("correo", watch('correo'))
+    console.log("password", watch('password'))
+    console.log("mes", watch('mes'))
+  },[watch('nombre'), watch('correo'), watch('password'), watch('confirmaPassword'), watch('fechaNacimiento'), watch('pais'), watch('provincia'), watch('terminos'), watch('fotoDelUsuario'), watch('mes')])
+
+  const handleMesChange = (e) => {
+    setValue('mes', e.target.value)
+  }
 
   return (
     <>
       <h1>Formulario</h1>
       <form onSubmit={onSubmit} >
+        <select onChange={handleMesChange}>
+          <option value="" hidden>Mes</option>
+          <option value="enero">Enero</option>
+          <option value="febrero">Febrero</option>
+          <option value="marzo">Marzo</option>
+        </select>
+
+        <select onChange={handleMesChange}>
+          <option value="" hidden>MesOtro</option>
+          <option value="enero">Enero</option>
+          <option value="febrero">Febrero</option>
+          <option value="marzo">Marzo</option>
+        </select>
+
         <label htmlFor='nombre'>Nombre</label>
         <input id="nombre" type="text" {...register("nombre", {
           required: {

@@ -18,6 +18,15 @@ const Header = () => {
       <Link to='/todoReducer'>
         <h1>Todo Con Reducer</h1>
       </Link>
+      <Link to='/filtro'>
+        <h1>| Filtro</h1>
+      </Link>
+      <Link to='/calendario'>
+        <h1>| Calendario</h1>
+      </Link>
+      <Link to='/excel'>
+        <h1>| Excel</h1>
+      </Link>
     </div>
   )
 }
