@@ -1,0 +1,123 @@
+.button-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 0;
+}
+
+.btn {
+  width: 9em;
+  height: 3em;
+  border-radius: 30em;
+  font-size: 15px;
+  border: none;
+  font-family: inherit;
+  overflow: hidden;
+  position: relative; /* Para posicionar el pseudo-elemento */
+  z-index: 1;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  background-color: #fff; /* Fondo inicial del botón */
+}
+
+.btn::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 30em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+  transition: transform 0.5s ease;
+  transform: scaleX(0); /* Inicia con el fondo oculto */
+  transform-origin: left; /* La animación empieza desde la izquierda */
+  z-index: -1;
+}
+
+.btn:hover::before {
+  transform: scaleX(1); /* Al pasar el mouse, se expande el fondo */
+}
+
+.btn:hover {
+  color: #000; /* Opcional: cambiar el color del texto al pasar el mouse */
+}
+
+.images-container{
+  padding-top: 40px;
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.images-container img{
+  width: 300px;
+  height: 390px;
+  margin: 10px;
+  transition: ease-in-out 0.4s;
+  object-fit: cover;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.images-container img {
+  view-timeline-name: --reveal;
+
+  animation-name: show;
+  animation-fill-mode: both;
+
+  animation-timeline: --reveal;
+  animation-range: entry 15% cover 50%;
+}
+
+@keyframes show {
+  from{
+    opacity: 0; scale: 10%;
+  }
+  to {
+    opacity: 1; scale: 100%;
+  }
+}
+
+.gallery{
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.card{
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border: none;
+  flex: 1;
+  cursor: pointer;
+  transition: ease-in-out 0.4s;
+  font-size: 82px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:nth-child(1){
+  background-color: red;
+}
+
+.card:nth-child(2){
+  background-color: green;
+}
+
+.card:nth-child(3){
+  background-color: purple;
+}
+
+.card:nth-child(4){
+  background-color: yellow;
+}
+
+.card:nth-child(5){
+  background-color: blue;
+}
+
+.card:hover{
+  flex: 3;
+}
